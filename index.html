@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teste grátis</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.button {
+  display: block;
+  background: #22c55e;
+  color: white;
+  text-decoration: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+.button:hover {
+  background: #16a34a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📺 Assista tudo pagando menos</h1>
+
+<p>Filmes, séries e esportes direto no seu dispositivo.</p>
+
+<p>
+✔ Funciona em TV, celular e computador<br>
+✔ Instalação rápida<br>
+✔ Teste grátis disponível
+</p>
+
+<a id="btn" class="button">
+QUERO TESTAR AGORA
+</a>
+
+</div>
+
+<script>
+function detectarDispositivo() {
+  const ua = navigator.userAgent;
+
+  if (/Android/i.test(ua)) return "android";
+  if (/iPhone|iPad|iPod/i.test(ua)) return "iphone";
+  if (/Windows|Macintosh/i.test(ua)) return "computador";
+
+  return "tv";
+}
+
+const device = detectarDispositivo();
+
+const link = `https://go.sisf5.com.br/?device=${device}&src=landing`;
+
+document.getElementById("btn").href = link;
+</script>
+
+</body>
+</html>
